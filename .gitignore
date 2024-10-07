@@ -1,0 +1,76 @@
+# Drupal
+/web/*.*
+/web/core
+/web/libraries
+/web/modules/contrib
+/web/themes/contrib
+/web/profiles/contrib
+
+/web/sites/*
+!/web/sites/default
+/web/sites/default/*
+!/web/sites/default/settings
+!/web/sites/default/settings.php
+
+/config/**/.htaccess
+
+# Drush
+/drush/contrib
+
+# Compiled assets
+/web/**/*.css
+/web/**/*.js
+!/web/modules/custom/**/*.js
+!/web/themes/custom/**/*.js
+!/web/**/gulpfile.js
+!/web/**/*.es6.js
+/web/**/*.map
+.sass-cache
+
+# Ignore configuration files that may contain sensitive information.
+local.settings.php
+local.drush.yml
+local.site.yml
+local.services.yml
+*.local
+secrets.php
+
+# Ignore drupal core.
+web/core
+
+# Ignore paths that contain user-generated content.
+web/sites/*/files
+/files-private
+web/sites/*/private
+/.vscode
+
+# Ignore contrib modules. These should be created during build process.
+web/modules/contrib
+web/themes/contrib
+web/profiles/contrib
+web/libraries
+drush/Commands
+
+# Ignore custom theme build artifacts
+web/themes/custom/**/node_modules
+web/themes/custom/**/css/*
+web/themes/custom/**/styleguide
+
+# Do not ignore gulpfile
+!/web/themes/*/gulpfile.js
+
+# Project dependencies
+node_modules
+/vendor
+
+# Project test results
+/tests/**/results
+.phpunit.result.cache
+
+# PHPStorm
+/.idea/
+.idea/*
+
+# MacOS artifacts
+.DS_Store
+
